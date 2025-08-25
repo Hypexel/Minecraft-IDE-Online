@@ -1,1 +1,40 @@
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Minecraft Plugin IDE</title>
+    <style>
+      :root{
+        --bg:#0b0b0b; --panel:#0f1720; --accent:#10b981; --muted:#9ca3af; --text:#e6eef3;
+      }
+      html,body,#root{height:100%}
+      body{
+        margin:0;
+        font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        background:linear-gradient(180deg,#071018 0%, #07111a 100%);
+        color:var(--text);
+      }
+      .app{display:grid; grid-template-columns:320px 1fr; height:100vh; gap:12px; padding:12px;}
+      .sidebar{background:var(--panel); border-radius:10px; padding:12px; display:flex; flex-direction:column; gap:8px; min-width:280px;}
+      .topbar{display:flex; gap:8px; align-items:center;}
+      button{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--text); padding:6px 10px; border-radius:6px; cursor:pointer;}
+      button.primary{background:var(--accent); color:#031018; border:none;}
+      .file-tree{overflow:auto; padding:6px; border-radius:6px; background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); flex:1;}
+      .file{padding:6px 8px; border-radius:6px; cursor:pointer; display:flex; justify-content:space-between; align-items:center;}
+      .file:hover{background:rgba(255,255,255,0.02)}
+      .dir{font-weight:600; margin-top:8px;}
+      .editor-panel{display:flex; flex-direction:column; gap:8px; padding:12px;}
+      .editor-toolbar{display:flex; gap:8px; align-items:center;}
+      .editor{height:calc(100vh - 160px); background:#07121a; border-radius:8px; padding:12px; display:flex; flex-direction:column;}
+      textarea{flex:1; width:100%; background:#07121a; color:var(--text); border:1px solid rgba(255,255,255,0.04); padding:12px; border-radius:6px; resize:vertical; font-family:monospace; font-size:13px;}
+      .muted{color:var(--muted); font-size:13px;}
+      .controls{display:flex; gap:8px; align-items:center;}
+      a.download{color:var(--accent); text-decoration:none; font-weight:600;}
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
